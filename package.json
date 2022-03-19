@@ -1,0 +1,46 @@
+{
+  "name": "fewer",
+  "version": "0.0.1",
+  "description": "low code",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swcbo/fewer.git"
+  },
+  "keywords": [
+    "low",
+    "code",
+    "react"
+  ],
+  "author": "swcbo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swcbo/fewer/issues"
+  },
+  "homepage": "https://github.com/swcbo/fewer#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rmox": "^1.1.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0-1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-n": "^15.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.3",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "less": "^4.1.1",
+    "lint-staged": "^11.2.3",
+    "typescript": "^4.6.2"
+  }
+}
