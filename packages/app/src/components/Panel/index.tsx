@@ -2,18 +2,19 @@
  * @Author: swcbo
  * @Date: 2022-03-21 18:14:11
  * @LastEditors: swcbo
- * @LastEditTime: 2022-03-21 23:24:28
+ * @LastEditTime: 2022-03-22 10:28:06
  * @FilePath: /fewer/packages/app/src/components/Panel/index.tsx
  * @Description: 可拖动控制板
  */
-import { FC, memo, MouseEvent, useEffect, useRef, useState } from 'react';
+import { FC, HTMLAttributes, memo, MouseEvent, useEffect, useRef, useState } from 'react';
 import styles from './index.module.less';
-interface IPanel {
+interface IPanel extends HTMLAttributes<HTMLDivElement> {
   top?: number | string;
   left?: number | string;
   right?: number;
 }
-const Panel: FC<IPanel> = ({ children, top = 70, left, right }) => {
+const Panel: FC<IPanel> = ({ children, top = 70, left, right, className, ...other }) => {
+  console.log(className, 'className');
   const canMove = useRef(false);
   const [position, setPosition] = useState({ top, left, right });
   const barRef = useRef<HTMLDivElement>(null);
@@ -37,9 +38,12 @@ const Panel: FC<IPanel> = ({ children, top = 70, left, right }) => {
       window.removeEventListener('mousemove', onMouseMove);
     };
   }, []);
-
+  console.log(other);
   return (
-    <div style={{ ...position }} ref={barRef} className={`${styles.panel} mouse`}>
+    <div
+      style={{ ...position, ...other.style }}
+      ref={barRef}
+      className={`${styles.panel} mouse ${className}`}>
       <div
         className={styles.drag_bar}
         onMouseDownCapture={toggleOpen(true)}

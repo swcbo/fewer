@@ -2,7 +2,7 @@
  * @Author: swcbo
  * @Date: 2022-03-21 18:07:24
  * @LastEditors: swcbo
- * @LastEditTime: 2022-03-21 23:23:17
+ * @LastEditTime: 2022-03-22 00:05:48
  * @FilePath: /fewer/packages/app/src/pages/paint/index.tsx
  * @Description:
  */
@@ -21,15 +21,18 @@ const PaintPage: FC = () => {
         <IconMenu />
         <IconMenu />
       </div>
-      {/* 组件 */}
-      <Panel left={10}></Panel>
+
       {/* 配置 */}
-      <Panel right={10}></Panel>
+
       <div className={`${styles.bottom_center} mouse`}></div>
       {/* 底部按钮 */}
       <div className={styles.bottom_icons}>
-        <IconMenu />
-        <IconMenu />
+        <IconMenu>
+          <Panel left={10}></Panel>
+        </IconMenu>
+        <IconMenu>
+          <Panel right={10}></Panel>
+        </IconMenu>
         <IconMenu />
       </div>
     </>
