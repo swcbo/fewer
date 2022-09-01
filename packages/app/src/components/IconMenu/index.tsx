@@ -2,7 +2,7 @@
  * @Author: swcbo
  * @Date: 2022-03-21 21:56:42
  * @LastEditors: swcbo
- * @LastEditTime: 2022-03-22 10:32:27
+ * @LastEditTime: 2022-09-01 16:19:35
  * @FilePath: /fewer/packages/app/src/components/IconMenu/index.tsx
  * @Description: 通用iconMenu
  */
@@ -40,7 +40,6 @@ const Menu: FC<IIconMenu> = ({ children, ...other }) => {
     }
     return <></>;
   });
-  console.log(menu.current);
   return (
     <>
       <div className={styles.menu} {...other} onClick={onMenuClick} ref={menu}></div>
